@@ -1,0 +1,28 @@
+namespace IJunior_Task16
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int tryCount = 3;
+            string password = "12345";
+            string userInput;
+
+            for (int i = 0; i < tryCount; i++)
+            {
+                Console.Write("Введите пароль: ");
+                userInput = Console.ReadLine();
+
+                if (userInput == password)
+                {
+                    Console.WriteLine("Верный пароль! \n\nВсе чётенько!!!");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine($"\nПароль НЕ верный. \n\nОсталось попыток: {tryCount - i - 1}");
+                }
+            }
+        }
+    }
+}
